@@ -4,19 +4,19 @@
 #  Student Number: 1130690
 #  Math 480A
 #
+#  This is a program that determines wheter the given positive integer
+#  is Prime or not. It has two usable method: isPrime(n) and test().
 #  
-#
-#
 
 from __future__ import division
 from math import sqrt, log, floor, ceil
 from fractions import gcd
 
 def isPrime(n):
-	"""This is an implementation of algorithm that determines whether an imput
-	number is prime number of not. Manindra Angrawal, Neeraj Kayal, and Nitin
-	Saxena first published the algorithm. The algorithm presents unconditional
-	deterministic polynomial-time."""
+	"""This is an implementation of algorithm that determines whether
+	an imput number is prime number of not. Manindra Angrawal, Neeraj
+	Kayal, and Nitin Saxena first published the algorithm. The algorithm
+	presents unconditional deterministic polynomial-time."""
 	try:
 		if not isinstance(n, (int, long, Integer)):
 			raise TypeError("n must be an int")
@@ -38,8 +38,8 @@ def isPrime(n):
 		raise
 	
 def step1(n):
-	"""First Step: Check wheter given integer n is perfect power, i.e. n = a^b.
-	If it is not then n is possibly Prime."""
+	"""First Step: Check wheter given integer n is perfect power, i.e. 
+	n = a^b. If it is not then n is possibly Prime."""
 	if n == 2:
 		return "Prime"
 	elif n%2 == 0:
@@ -102,8 +102,12 @@ def step4(n, r):
 
 def test():
 	"""Test whether my program works all right. Compares to the built in
-	sage method Primes()"""
-	print "Checking whether the method finds all the front few primes."
+	sage method Primes(). WARNING: It takes lots of time"""
+	# To Do: I made this test method because I wasn't really sure whether
+	# my implementation will work flawlessly. I am now almost positive
+	# that I did not make any mistake. I now need to prove everything
+	# and fully understand what I just implemented.
+	print "Checking whether it finds all the front few primes."
 	count1 = 0
 	badcount = 0
 	for i in Primes():
