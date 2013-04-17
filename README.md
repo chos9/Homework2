@@ -5,7 +5,8 @@ This is an implementation of algoithem that determines whether
 the given integer is prime or not. It was first published by
 Manindra Angrawal, Neeraj Kayal, and Nitin Saxena in 2005 in
 Paper PRIMES is in P. It has two usable method: isPrime(n) and
-test().
+test(). It needs to be loaded on sage since it requires euler_phi
+function in sage.
 
 Examples:
 
